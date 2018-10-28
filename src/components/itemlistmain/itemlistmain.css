@@ -1,0 +1,25 @@
+.itemFrame{
+    border:solid black 2px;
+    box-sizing: content-box;
+    padding:5%;
+    transition: all .4s;
+}
+.itemFrame:hover{
+    box-shadow:3px 3px black;
+    position:relative;
+     transform:scaleX(1.003);
+}
+.itemFrame:hover::after{
+   transform:scaleX(2);
+}
+
+.itemName{
+    background-color:black;
+    color:white;
+    text-align:center;
+ 
+}
+.itemBrand{
+    size:.8em;
+   
+}   

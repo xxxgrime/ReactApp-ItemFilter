@@ -1,0 +1,15 @@
+.mobx{
+    display:none;
+}
+
+.mobxnormal{
+    display:block;
+}
+
+.mobtitle{
+    padding-bottom:5px;
+    color:black;
+    float:left;
+    margin-left:40px;
+   
+}

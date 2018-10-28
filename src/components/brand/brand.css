@@ -1,0 +1,6 @@
+@media (max-width:590px){
+    .Listofitems li{
+        display:inline-block;
+        margin-right:4%;
+    }
+}

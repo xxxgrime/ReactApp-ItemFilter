@@ -1,2 +1,3 @@
-# react-boiler-plate
-basic react setup
+ReactApp-ItemFilter
+
+Basic React with Item filters

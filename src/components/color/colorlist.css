@@ -1,13 +1,18 @@
 .colorlist{
-    border:solid black 1px!important;
-    width:30px!important;
-    height:30px!important;
+   
+    width:25px!important;
+    height:25px!important;
 }
 .inner{
 
-    height:30px!important;
-    width:30px!important;
+    height:25px!important;
+    width:25px!important;
     user-select:none;
     text-align: center;
     transition:.3s all;
+}
+
+.lixlsttclass{
+    display:inline-block;
+    margin-right:3px;
 }

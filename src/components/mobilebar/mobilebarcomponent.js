@@ -55,8 +55,8 @@ export class Mobilebarx extends React.Component {
                     <div className={styles.mobtitle} onClick={(e) => { mobile(e, this.Color) }}>Color</div>
        
                     <br />
-                    <div className={styles.mobx} ref={this.Brand}><Brand brandlist={this.props.brandList} addFilter={this.props.addFilter} removeFilter={this.props.removeFilter} mob={true} /></div>
-                    <div className={styles.mobx} ref={this.Category}><Category addFilter={this.props.addFilter} removeFilter={this.props.removeFilter} catlist={this.props.categoryList} mob={true} /></div>
+                    <div className={styles.mobx} ref={this.Brand} style={{position:"relative",right:"2px"}}><Brand brandlist={this.props.brandList} addFilter={this.props.addFilter} removeFilter={this.props.removeFilter} mob={true} /></div>
+                    <div className={styles.mobx} ref={this.Category} style={{position:"relative",right:"2px"}}><Category addFilter={this.props.addFilter} removeFilter={this.props.removeFilter} catlist={this.props.categoryList} mob={true} /></div>
                     <div className={styles.mobx} ref={this.Color}><Color addFilter={this.props.addFilter} removeFilter={this.props.removeFilter} colorlist={this.props.colorList} mob={true} /></div>
                 </div>
           

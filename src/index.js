@@ -202,16 +202,20 @@ const AppInner = (props) => {
   return (
     <div className="container">
       <div className="row">
+        <div className={styles.sidelist}>
         <div className="col s12 l2 m2 mob" style={{ border: "solid black 1px" }}>
           <MyContextConsumer>{({ getOptions, addFilter, removeFilter }) =>
             <SideBar getOptions={getOptions} removeFilter={removeFilter} addFilter={addFilter} />}
           </MyContextConsumer>
+          </div>
+          </div>
           <div className={styles.mobx}>
+          <div className="col s12 l12 m12">
             <MyContextConsumer>
             {({getOptions,addFilter,removeFilter})=><Mobilebar addFilter={addFilter} removeFilter={removeFilter} getOptions={getOptions}/>}</MyContextConsumer>
           </div>
         </div>
-        <div className="col s12 m10 l10">
+        <div className="col s12 m12 l10">
           <MyContextConsumer>{({ options, removeFilter }) => <Topfilterbuttons removeFilter={removeFilter} options={options} />}</MyContextConsumer>
           <MyContextConsumer>{({ getItem }) =>
             <ItemListMain getItem={getItem} />}

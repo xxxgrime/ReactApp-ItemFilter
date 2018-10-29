@@ -9,10 +9,10 @@ export const Topfilterbuttons = (props) => {
         for (var i = 0; i < props.options.length; i++) {
             //  console.log(props.options)   
             if (props.options[i][0] == "color") {
-                buttonlist.push(<li style={{ display: "inline-block", marginRight: "10px", border: "solid black 1px", position: "relative", width: "100px",backgroundColor:props.options[i][1]}} key={i}><div style={{ marginLeft: "10px", padding: "0px" }} ><span style={{color:"white",fontWeight:"bolder"}}>{props.options[i][1]}</span><div style={{ backgroundColor: "yellow" }}><Displayclose options={props.options[i]} remove={props.removeFilter} flag={props.options[i][0]} value={props.options[i][1]} reference={props.options[i][2]} color={true} /></div></div></li>)
+                buttonlist.push(<li style={{marginBottom:"2%", display: "inline-block", marginRight: "10px", border: "solid black 1px", position: "relative", width: "100px",backgroundColor:props.options[i][1]}} key={i}><div style={{ marginLeft: "10px", padding: "0px" }} ><span style={{color:"white",fontWeight:"bolder"}}>{props.options[i][1]}</span><div style={{ backgroundColor: "yellow" }}><Displayclose options={props.options[i]} remove={props.removeFilter} flag={props.options[i][0]} value={props.options[i][1]} reference={props.options[i][2]} color={true} /></div></div></li>)
             }
             else {
-                buttonlist.push(<li style={{ display: "inline-block", marginRight: "10px", border: "solid black 1px", position: "relative", width: "100px" }} key={i}><div style={{ marginLeft: "10px", padding: "0px" }} ><span style={{fontWeight:"bolder"}}>{props.options[i][1]}</span><div style={{ backgroundColor: "yellow" }}><Displayclose options={props.options[i]} remove={props.removeFilter} flag={props.options[i][0]} value={props.options[i][1]} reference={props.options[i][2]} /></div></div></li>)
+                buttonlist.push(<li style={{marginBottom:"3%" ,display: "inline-block", marginRight: "10px", border: "solid black 1px", position: "relative", width: "100px" }} key={i}><div style={{ marginLeft: "10px", padding: "0px" }} ><span style={{fontWeight:"bolder"}}>{props.options[i][1]}</span><div style={{ backgroundColor: "yellow" }}><Displayclose options={props.options[i]} remove={props.removeFilter} flag={props.options[i][0]} value={props.options[i][1]} reference={props.options[i][2]} /></div></div></li>)
             }
 
         }

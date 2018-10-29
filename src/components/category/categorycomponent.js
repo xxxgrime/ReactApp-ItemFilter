@@ -10,10 +10,25 @@ export const Category = (props) => {
 
 const CategoryList = (props) => {
     var category = [];
-    console.log("this is the finded")
+    var pixel;
+    screen.width<1000?pixel="2px":pixel="0px"
   
+    console.log(pixel)
     if (props.catlist) {
         for (var i = 0; i < props.catlist.length; i++) {
+            if(i==props.catlist.length-1){
+                category.push(<li key={i} style={{}}><label>
+                    <input type="checkbox" value={props.catlist[i]} onClick={
+                        (e) => {
+                            e.target.checked == true ?
+                                props.addFilter("category", e.target.value, e.target) :
+                                props.removeFilter("category", e.target.value, e.target)
+                        }
+                    } />
+                    <span style={{paddingLeft:"23px",position:"relative",right:pixel}}>{props.catlist[i]}</span>
+                </label></li>)   
+            }
+            else{
                 category.push(<li key={i}><label>
                     <input type="checkbox" value={props.catlist[i]} onClick={
                         (e) => {
@@ -22,10 +37,13 @@ const CategoryList = (props) => {
                                 props.removeFilter("category", e.target.value, e.target)
                         }
                     } />
-                    <span>{props.catlist[i]}</span>
+                    <span style={{paddingLeft:"23px"}}>{props.catlist[i]}</span>
                 </label></li>)   
             }
+                
+            }
         }
+  
          return (<div className={styles.Listofitems}><ul>{category}</ul></div>)
 
     }

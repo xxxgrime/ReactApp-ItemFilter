@@ -1,6 +1,11 @@
-@media (min-width:590px){
+@media (min-width:1201px){
     .mobx{
         display:none
     }
  
+}
+@media (max-width:1200px){
+    .sidelist{
+        display:none
+    }
 }

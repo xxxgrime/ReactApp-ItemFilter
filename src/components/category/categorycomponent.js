@@ -12,12 +12,14 @@ const CategoryList = (props) => {
     var category = [];
     var pixel;
     screen.width<1000?pixel="2px":pixel="0px"
+    screen.width==360?pixel="6px":pixel=pixel;
+		
   
     console.log(pixel)
     if (props.catlist) {
         for (var i = 0; i < props.catlist.length; i++) {
             if(i==props.catlist.length-1){
-                category.push(<li key={i} style={{}}><label>
+                category.push(<li key={i}><label>
                     <input type="checkbox" value={props.catlist[i]} onClick={
                         (e) => {
                             e.target.checked == true ?
@@ -25,7 +27,7 @@ const CategoryList = (props) => {
                                 props.removeFilter("category", e.target.value, e.target)
                         }
                     } />
-                    <span style={{paddingLeft:"23px",position:"relative",right:pixel}}>{props.catlist[i]}</span>
+                    <span style={{minWidth:"5px"}}>{props.catlist[i]}</span>
                 </label></li>)   
             }
             else{
@@ -37,7 +39,7 @@ const CategoryList = (props) => {
                                 props.removeFilter("category", e.target.value, e.target)
                         }
                     } />
-                    <span style={{paddingLeft:"23px"}}>{props.catlist[i]}</span>
+                    <span style={{minWidth:"5px"}}>{props.catlist[i]}</span>
                 </label></li>)   
             }
                 

@@ -22,16 +22,20 @@ export const ColorList = (props) => {
             colorlist.push(
                 <li key={i} className={styles.lixlsttclass}>
                     
-                        <div className={styles.colorlist} style={{ backgroundColor: props.colorlist[i]}}><div className={styles.inner} style={{ opacity: "0", color: "white", backgroundColor: props.colorlist[i] }}
+                        <div className={styles.colorlist+"sad"} style={{ backgroundColor: props.colorlist[i]}}><div className={styles.inner} style={{ opacity: "0", color: "white", backgroundColor: props.colorlist[i] }}
                             onMouseOver={
                                 (e) => {
-                                    e.target.parentNode.style.opacity = "1"
+                                    if(e.target.className[0]==="m"){
+                                         e.target.parentNode.style.opacity = "1"
+                                    }
+                                   
                                 }
 
                             }
                             onMouseLeave={
                                 (e) => {
-                                    var x = e.target.parentNode;
+                                    if(e.target.className[0]==="m"){
+                                        var x = e.target.parentNode;
                                     // e.target.parentNode.style.color=="grey"?e.target.parentNode.style.opacity="1":e.target.parentNode.opacity="0.1";
                                     if (e.target.parentNode.style.color == "grey") {
                                         console.log(x)
@@ -40,14 +44,18 @@ export const ColorList = (props) => {
                                     else {
                                         e.target.parentNode.style.opacity = "0"
                                     }
+                                    }
 
                                 }
                             }
                             onClick={
                                 (e) => {
+                                   if(e.target.className[0]==="m"){
                                     e.target.parentNode.style.color == "white" ?
                                         (props.addFilter("color", e.target.parentNode.style.backgroundColor, e.target), e.target.parentNode.style.color = "grey", e.target.parentNode.style.opacity = "1") :
                                         (props.removeFilter("color", e.target.parentNode.style.backgroundColor, e.target), e.target.parentNode.style.color = "white", e.target.parentNode.style.opacity = "0")
+                                   }                             
+                                    
                                 }
                             }><i style={{ width: "inherit", height: "inherit"}} className="material-icons check">check</i></div></div>
                

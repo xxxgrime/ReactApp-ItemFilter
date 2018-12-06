@@ -59,7 +59,7 @@ class App extends React.Component {
     return result.length
   }
 
-  multipleOptionsRenderer(flag) {
+  multipleOptionsRenderer() {
 
     this.state.items = data;
     var distinctcat = this.getdistinctvalues();
@@ -140,26 +140,16 @@ class App extends React.Component {
     var complete = new Promise((resolve, reject) => {
       brandList = brandList.sort()
       catList = catList.sort()
-      if (flag && flag == "brand") {
-        this.setState({
-          brandList: this.state.brandList,
-          catList: catList
-        })
-      }
-      else if (flag && flag == "category") {
-
-        this.setState({
-          brandList: brandList,
-          catList: this.state.catList
-        })
-      }
-      else {
+	console.log("theworldismine")
+	console.log(catList)
+   	console.log(brandList)
+	console.log(colorList)
+	console.log("the world is not fucked")
         this.setState({
           brandList: brandList,
           catList: catList,
           colorList: colorList
         })
-      }
       resolve("done")
     }).then(() => {
       console.log("options set")
